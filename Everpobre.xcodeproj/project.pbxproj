@@ -19,6 +19,7 @@
 		0D54AD5E1A7FAB3E00A03D79 /* JSZNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD561A7FAB3E00A03D79 /* JSZNote.m */; };
 		0D54AD5F1A7FAB3E00A03D79 /* JSZNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD581A7FAB3E00A03D79 /* JSZNotebook.m */; };
 		0D54AD601A7FAB3E00A03D79 /* JSZPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD5A1A7FAB3E00A03D79 /* JSZPhotoContainer.m */; };
+		0DA144FE1A80D09B00550A2B /* JSZEverpobreBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		0D54AD581A7FAB3E00A03D79 /* JSZNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNotebook.m; sourceTree = SOURCE_ROOT; };
 		0D54AD591A7FAB3E00A03D79 /* JSZPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZPhotoContainer.h; sourceTree = SOURCE_ROOT; };
 		0D54AD5A1A7FAB3E00A03D79 /* JSZPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZPhotoContainer.m; sourceTree = SOURCE_ROOT; };
+		0DA144FC1A80D09B00550A2B /* JSZEverpobreBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZEverpobreBaseClass.h; sourceTree = SOURCE_ROOT; };
+		0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZEverpobreBaseClass.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,12 +138,9 @@
 		0D54AD421A7F950A00A03D79 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0D54AD4F1A7FAB3E00A03D79 /* _JSZNote.h */,
-				0D54AD501A7FAB3E00A03D79 /* _JSZNote.m */,
-				0D54AD511A7FAB3E00A03D79 /* _JSZNotebook.h */,
-				0D54AD521A7FAB3E00A03D79 /* _JSZNotebook.m */,
-				0D54AD531A7FAB3E00A03D79 /* _JSZPhotoContainer.h */,
-				0D54AD541A7FAB3E00A03D79 /* _JSZPhotoContainer.m */,
+				0DA144FC1A80D09B00550A2B /* JSZEverpobreBaseClass.h */,
+				0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */,
+				0D54AD611A7FABCC00A03D79 /* Machine */,
 				0D54AD551A7FAB3E00A03D79 /* JSZNote.h */,
 				0D54AD561A7FAB3E00A03D79 /* JSZNote.m */,
 				0D54AD571A7FAB3E00A03D79 /* JSZNotebook.h */,
@@ -150,6 +150,19 @@
 				0D54AD431A7F958300A03D79 /* Model.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		0D54AD611A7FABCC00A03D79 /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				0D54AD4F1A7FAB3E00A03D79 /* _JSZNote.h */,
+				0D54AD501A7FAB3E00A03D79 /* _JSZNote.m */,
+				0D54AD511A7FAB3E00A03D79 /* _JSZNotebook.h */,
+				0D54AD521A7FAB3E00A03D79 /* _JSZNotebook.m */,
+				0D54AD531A7FAB3E00A03D79 /* _JSZPhotoContainer.h */,
+				0D54AD541A7FAB3E00A03D79 /* _JSZPhotoContainer.m */,
+			);
+			name = Machine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +266,7 @@
 			files = (
 				0D54AD5F1A7FAB3E00A03D79 /* JSZNotebook.m in Sources */,
 				0D54AD281A7F917000A03D79 /* AppDelegate.m in Sources */,
+				0DA144FE1A80D09B00550A2B /* JSZEverpobreBaseClass.m in Sources */,
 				0D54AD5B1A7FAB3E00A03D79 /* _JSZNote.m in Sources */,
 				0D54AD5D1A7FAB3E00A03D79 /* _JSZPhotoContainer.m in Sources */,
 				0D54AD601A7FAB3E00A03D79 /* JSZPhotoContainer.m in Sources */,
@@ -442,6 +456,7 @@
 				0D54AD3E1A7F917000A03D79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D54AD3F1A7F917000A03D79 /* Build configuration list for PBXNativeTarget "EverpobreTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +465,7 @@
 				0D54AD411A7F917000A03D79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

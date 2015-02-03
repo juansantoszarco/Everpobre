@@ -2,6 +2,7 @@
 // Make changes to JSZNotebook.h instead.
 
 @import CoreData;
+#import "JSZEverpobreBaseClass.h"
 
 extern const struct JSZNotebookAttributes {
 	__unsafe_unretained NSString *creationDate;
@@ -18,7 +19,7 @@ extern const struct JSZNotebookRelationships {
 @interface JSZNotebookID : NSManagedObjectID {}
 @end
 
-@interface _JSZNotebook : NSManagedObject {}
+@interface _JSZNotebook : JSZEverpobreBaseClass {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

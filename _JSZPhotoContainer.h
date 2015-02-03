@@ -2,6 +2,7 @@
 // Make changes to JSZPhotoContainer.h instead.
 
 @import CoreData;
+#import "JSZEverpobreBaseClass.h"
 
 extern const struct JSZPhotoContainerAttributes {
 	__unsafe_unretained NSString *photoData;
@@ -16,7 +17,7 @@ extern const struct JSZPhotoContainerRelationships {
 @interface JSZPhotoContainerID : NSManagedObjectID {}
 @end
 
-@interface _JSZPhotoContainer : NSManagedObject {}
+@interface _JSZPhotoContainer : JSZEverpobreBaseClass {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
