@@ -55,11 +55,14 @@
 -(void) setupKVO{
     //Alta en notificaciones para las propiedades que quiero observar
     
+    
+    //Los valores antiguo y nuevo no nos hacen falta por lo tanto se quitan
+    //NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
     for (NSString* key in [self observableKeys]) {
         
         [self addObserver:self
                forKeyPath:key
-                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                  options:0
                   context:NULL];
         
     }
