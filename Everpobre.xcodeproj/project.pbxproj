@@ -20,6 +20,7 @@
 		0D54AD5F1A7FAB3E00A03D79 /* JSZNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD581A7FAB3E00A03D79 /* JSZNotebook.m */; };
 		0D54AD601A7FAB3E00A03D79 /* JSZPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD5A1A7FAB3E00A03D79 /* JSZPhotoContainer.m */; };
 		0DA144FE1A80D09B00550A2B /* JSZEverpobreBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */; };
+		0DA145011A80D6E800550A2B /* AGTCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA145001A80D6E800550A2B /* AGTCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		0D54AD5A1A7FAB3E00A03D79 /* JSZPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZPhotoContainer.m; sourceTree = SOURCE_ROOT; };
 		0DA144FC1A80D09B00550A2B /* JSZEverpobreBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZEverpobreBaseClass.h; sourceTree = SOURCE_ROOT; };
 		0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZEverpobreBaseClass.m; sourceTree = SOURCE_ROOT; };
+		0DA144FF1A80D6E800550A2B /* AGTCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataStack.h; sourceTree = "<group>"; };
+		0DA145001A80D6E800550A2B /* AGTCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 		0D54AD421A7F950A00A03D79 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0DA144FF1A80D6E800550A2B /* AGTCoreDataStack.h */,
+				0DA145001A80D6E800550A2B /* AGTCoreDataStack.m */,
 				0DA144FC1A80D09B00550A2B /* JSZEverpobreBaseClass.h */,
 				0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */,
 				0D54AD611A7FABCC00A03D79 /* Machine */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA145011A80D6E800550A2B /* AGTCoreDataStack.m in Sources */,
 				0D54AD5F1A7FAB3E00A03D79 /* JSZNotebook.m in Sources */,
 				0D54AD281A7F917000A03D79 /* AppDelegate.m in Sources */,
 				0DA144FE1A80D09B00550A2B /* JSZEverpobreBaseClass.m in Sources */,

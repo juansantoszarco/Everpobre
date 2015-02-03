@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 Juan Antonio de los Santos. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+#import "AGTCoreDataStack.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

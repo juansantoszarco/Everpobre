@@ -7,8 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "AGTCoreDataStack.h"
+
+#import "JSZNotebook.h"
+#import "JSZNote.h"
+#import "JSZPhotoContainer.h"
+
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong) AGTCoreDataStack *stack;
 
 @end
 
@@ -16,6 +24,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //creamos el stack con nombre model porque el modelo se llama Model.xcdatamodeld
+    
+    self.stack = [AGTCoreDataStack coreDataStackWithModelName:@"Model"];
+    
+    
+    //creamos los datos chorra
+    [self createDummyData];
+    
+    [self trastearConDatos];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -43,6 +62,117 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma  mark - Utils
+
+
+-(void) createDummyData{
+    //borramos el contenido anterior de la libreta
+    [self.stack zapAllData];
+    
+    //libreta
+    JSZNotebook *nb = [JSZNotebook notebookWithName:@"Ex-novias para el recuerdo"
+                                            context:self.stack.context];
+    
+    //notas a la libreta
+    [JSZNote noteWithName:@"Mariana Dávalos"
+                 notebook:nb
+                  context:self.stack.context];
+    
+    [JSZNote noteWithName:@"Camila Dávalos"
+                 notebook:nb
+                  context:self.stack.context];
+    
+    [JSZNote noteWithName:@"Pampita"
+                 notebook:nb
+                  context:self.stack.context];
+    
+    //Fisgoneamos el contenido de la libreta
+    NSLog(@"Libreta: %@", nb);
+    NSLog(@"Exs: %@",nb.notes);
+    
+}
+
+-(void) trastearConDatos{
+    
+    JSZNotebook *apps = [JSZNotebook notebookWithName:@"Ideas de Apps"
+                                              context:self.stack.context];
+    
+    JSZNote *iCachete = [JSZNote noteWithName:@"iCachete"
+                                     notebook:apps
+                                      context:self.stack.context];
+    
+    //Comprobamos que se modifica la fecha de modificacion
+    NSLog(@"Antes : %@",iCachete.modificationDate);
+    
+    iCachete.text = @"App educativa para reforzar la coordinación motora fina y los reflejos";
+    
+    NSLog(@"Después : %@",iCachete.modificationDate);
+    
+    //Realizmos una busqueda
+    NSFetchRequest *r = [NSFetchRequest fetchRequestWithEntityName:[JSZNote entityName]];
+    
+    //pedir resultados de 20 en 20
+    r.fetchBatchSize = 20;
+    
+    //ordenar los resultados con 2 descriptores, primero por nombre diferenciando con mayusculas y minusculas(se usa selector) y luego si hay empate por fecha de modificacion
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:JSZNoteAttributes.name ascending:YES selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:JSZNoteAttributes.modificationDate ascending:NO]];
+    
+    //se realiza la busqueda
+    NSError * err = nil;
+    
+    NSArray *res = [self.stack.context executeFetchRequest:r error:&err];
+    
+    if(res == nil){
+        //la cagamos
+        NSLog(@"Error al buscar: %@", err);
+    }
+    
+    NSLog(@"Numero de notas: %lu",(unsigned long)[res count]);
+    
+    NSLog(@"Las notas: %@",res);
+    
+    //El resultado de la consulta es un Array?? es un __NSArrayI porque son clases privadas las que empiezan por 2 guiones bajos
+    NSLog(@"Clase : %@", [res class]);
+    
+    
+    /////////////////////////////////////
+    ///Busqueda con predicado
+    //////
+    
+    r.predicate = [NSPredicate predicateWithFormat:@"notebook==%@",apps];
+    
+    
+    res = [self.stack.context executeFetchRequest:r error:&err];
+    
+    if(res == nil){
+        //la cagamos
+        NSLog(@"Error al buscar: %@", err);
+    }
+    
+    NSLog(@"Numero de notas: %lu",(unsigned long)[res count]);
+    
+    NSLog(@"Las notas: %@",res);
+    
+    //El resultado de la consulta es un Array?? es un __NSArrayI porque son clases privadas las que empiezan por 2 guiones bajos
+    NSLog(@"Clase : %@", [res class]);
+    
+    
+    //Borrar
+    //borro la libreta.si ahora busca me dara vacio, no hace falta guardar para ver los cambios, los hace en el aire
+    [self.stack.context deleteObject:apps];
+    
+    //Guardar
+    [self.stack saveWithErrorBlock:^(NSError *error) {
+        NSLog(@"Error al guardar, joder. %@",error);
+    }];
+    
+   
+    
+    
 }
 
 @end
