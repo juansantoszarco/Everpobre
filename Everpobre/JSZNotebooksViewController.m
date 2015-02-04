@@ -10,6 +10,11 @@
 
 #import "JSZNotebook.h"
 
+#import "JSZNotesViewController.h"
+
+#import "JSZNote.h"
+
+
 @interface JSZNotebooksViewController ()
 
 @end
@@ -98,6 +103,57 @@
     }
     return @"Remove";
 }
+
+#pragma  mark - Delegate
+
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //averiguar cual fue la libreta
+    JSZNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    
+    //Creo la seleccion de datos de la bd
+    NSFetchRequest *r = [NSFetchRequest fetchRequestWithEntityName:[JSZNote entityName]];
+    
+    r.fetchBatchSize = 30;
+    
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:JSZNoteAttributes.name
+                                                        ascending:YES
+                                                         selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:JSZNoteAttributes.modificationDate ascending:YES]];
+    
+    //Busqueda con predicado
+    
+    r.predicate = [NSPredicate predicateWithFormat:@"notebook==%@",nb];
+    
+    //me creo los resultados de la consulta
+
+    NSFetchedResultsController *fc = [[NSFetchedResultsController alloc]initWithFetchRequest:r
+                                                                        managedObjectContext:self.fetchedResultsController.managedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    
+    
+    
+    //creo una instancia de controlador de notas con el resultado de la consulta
+    
+    JSZNotesViewController *notesVC =  [[JSZNotesViewController alloc]initWithFetchedResultsController:fc
+                                                                                                 style:UITableViewStylePlain];
+    
+    
+    //le asigno su libreta, para que lo sepa en el didload de las notas
+    
+    notesVC.notebook = nb;
+    
+    //lo pusheo
+    
+    [self.navigationController pushViewController:notesVC
+                                         animated:YES];
+    
+    
+}
+
 
 #pragma  mark - Actions
 

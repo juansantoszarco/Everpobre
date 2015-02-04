@@ -10,6 +10,7 @@
 		0D24F51B1A821F7F005625B5 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F51A1A821F7F005625B5 /* AGTCoreDataTableViewController.m */; };
 		0D24F5201A82207C005625B5 /* JSZNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F51E1A82207C005625B5 /* JSZNotebooksViewController.m */; };
 		0D24F52B1A823E64005625B5 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F52A1A823E64005625B5 /* UIViewController+Navigation.m */; };
+		0D24F52E1A82434C005625B5 /* JSZNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F52D1A82434C005625B5 /* JSZNotesViewController.m */; };
 		0D54AD251A7F917000A03D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD241A7F917000A03D79 /* main.m */; };
 		0D54AD281A7F917000A03D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD271A7F917000A03D79 /* AppDelegate.m */; };
 		0D54AD2A1A7F917000A03D79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D54AD291A7F917000A03D79 /* Images.xcassets */; };
@@ -43,6 +44,8 @@
 		0D24F51E1A82207C005625B5 /* JSZNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNotebooksViewController.m; sourceTree = "<group>"; };
 		0D24F5291A823E64005625B5 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		0D24F52A1A823E64005625B5 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		0D24F52C1A82434C005625B5 /* JSZNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZNotesViewController.h; sourceTree = "<group>"; };
+		0D24F52D1A82434C005625B5 /* JSZNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNotesViewController.m; sourceTree = "<group>"; };
 		0D54AD1F1A7F917000A03D79 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D54AD231A7F917000A03D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D54AD241A7F917000A03D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 		0D24F51C1A821F92005625B5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0D24F52C1A82434C005625B5 /* JSZNotesViewController.h */,
+				0D24F52D1A82434C005625B5 /* JSZNotesViewController.m */,
 				0D24F5191A821F7F005625B5 /* AGTCoreDataTableViewController.h */,
 				0D24F51A1A821F7F005625B5 /* AGTCoreDataTableViewController.m */,
 				0D24F51D1A82207C005625B5 /* JSZNotebooksViewController.h */,
@@ -310,6 +315,7 @@
 				0D24F5201A82207C005625B5 /* JSZNotebooksViewController.m in Sources */,
 				0D54AD5D1A7FAB3E00A03D79 /* _JSZPhotoContainer.m in Sources */,
 				0D54AD601A7FAB3E00A03D79 /* JSZPhotoContainer.m in Sources */,
+				0D24F52E1A82434C005625B5 /* JSZNotesViewController.m in Sources */,
 				0D54AD251A7F917000A03D79 /* main.m in Sources */,
 				0D54AD5C1A7FAB3E00A03D79 /* _JSZNotebook.m in Sources */,
 				0D54AD451A7F958300A03D79 /* Model.xcdatamodeld in Sources */,
