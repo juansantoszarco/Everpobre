@@ -13,6 +13,8 @@
 #import "JSZNote.h"
 #import "JSZPhotoContainer.h"
 
+#import "JSZNotebooksViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -25,6 +27,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     //creamos el stack con nombre model porque el modelo se llama Model.xcdatamodeld
     
     self.stack = [AGTCoreDataStack coreDataStackWithModelName:@"Model"];
@@ -33,9 +37,37 @@
     //creamos los datos chorra
     [self createDummyData];
     
-    [self trastearConDatos];
+   // [self trastearConDatos];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //Creamos el conjunto de datos
+    
+    NSFetchRequest *r = [NSFetchRequest fetchRequestWithEntityName:[JSZNotebook entityName]];
+    
+    r.fetchBatchSize=30;
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:JSZNoteAttributes.name
+                                                         ascending:YES
+                                                          selector:@selector(caseInsensitiveCompare:)],
+                           [NSSortDescriptor sortDescriptorWithKey:JSZNoteAttributes.modificationDate ascending:YES]];
+    
+                          
+    NSFetchedResultsController *fc = [[NSFetchedResultsController alloc]initWithFetchRequest:r
+                                                                        managedObjectContext:self.stack.context
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    
+    //creamos el contolador
+    JSZNotebooksViewController *nbVC = [[JSZNotebooksViewController alloc]initWithFetchedResultsController:fc
+                                                                                                     style:UITableViewStylePlain];
+    
+    //Lo metemos en un navigation
+    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:nbVC];
+    
+    
+    //Lo mostramos
+    
+    self.window.rootViewController = navVC;
+    
+   
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -90,8 +122,8 @@
                   context:self.stack.context];
     
     //Fisgoneamos el contenido de la libreta
-    NSLog(@"Libreta: %@", nb);
-    NSLog(@"Exs: %@",nb.notes);
+ //   NSLog(@"Libreta: %@", nb);
+ //   NSLog(@"Exs: %@",nb.notes);
     
 }
 

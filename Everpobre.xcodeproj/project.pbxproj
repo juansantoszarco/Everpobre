@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D24F51B1A821F7F005625B5 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F51A1A821F7F005625B5 /* AGTCoreDataTableViewController.m */; };
+		0D24F5201A82207C005625B5 /* JSZNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F51E1A82207C005625B5 /* JSZNotebooksViewController.m */; };
 		0D54AD251A7F917000A03D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD241A7F917000A03D79 /* main.m */; };
 		0D54AD281A7F917000A03D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD271A7F917000A03D79 /* AppDelegate.m */; };
 		0D54AD2A1A7F917000A03D79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D54AD291A7F917000A03D79 /* Images.xcassets */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D24F5191A821F7F005625B5 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
+		0D24F51A1A821F7F005625B5 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
+		0D24F51D1A82207C005625B5 /* JSZNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZNotebooksViewController.h; sourceTree = "<group>"; };
+		0D24F51E1A82207C005625B5 /* JSZNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNotebooksViewController.m; sourceTree = "<group>"; };
 		0D54AD1F1A7F917000A03D79 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D54AD231A7F917000A03D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D54AD241A7F917000A03D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D24F51C1A821F92005625B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D24F5191A821F7F005625B5 /* AGTCoreDataTableViewController.h */,
+				0D24F51A1A821F7F005625B5 /* AGTCoreDataTableViewController.m */,
+				0D24F51D1A82207C005625B5 /* JSZNotebooksViewController.h */,
+				0D24F51E1A82207C005625B5 /* JSZNotebooksViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		0D54AD161A7F917000A03D79 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,7 @@
 		0D54AD211A7F917000A03D79 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				0D24F51C1A821F92005625B5 /* Controllers */,
 				0D54AD421A7F950A00A03D79 /* Models */,
 				0D54AD261A7F917000A03D79 /* AppDelegate.h */,
 				0D54AD271A7F917000A03D79 /* AppDelegate.m */,
@@ -271,9 +289,11 @@
 			files = (
 				0DA145011A80D6E800550A2B /* AGTCoreDataStack.m in Sources */,
 				0D54AD5F1A7FAB3E00A03D79 /* JSZNotebook.m in Sources */,
+				0D24F51B1A821F7F005625B5 /* AGTCoreDataTableViewController.m in Sources */,
 				0D54AD281A7F917000A03D79 /* AppDelegate.m in Sources */,
 				0DA144FE1A80D09B00550A2B /* JSZEverpobreBaseClass.m in Sources */,
 				0D54AD5B1A7FAB3E00A03D79 /* _JSZNote.m in Sources */,
+				0D24F5201A82207C005625B5 /* JSZNotebooksViewController.m in Sources */,
 				0D54AD5D1A7FAB3E00A03D79 /* _JSZPhotoContainer.m in Sources */,
 				0D54AD601A7FAB3E00A03D79 /* JSZPhotoContainer.m in Sources */,
 				0D54AD251A7F917000A03D79 /* main.m in Sources */,
