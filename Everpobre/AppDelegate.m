@@ -15,6 +15,10 @@
 
 #import "JSZNotebooksViewController.h"
 
+//importamos la categoria para que todo uinavigation entienda el wrappedIn
+
+#import "UIViewController+Navigation.h"
+
 
 @interface AppDelegate ()
 
@@ -60,13 +64,13 @@
                                                                                                      style:UITableViewStylePlain];
     
     //Lo metemos en un navigation
-    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:nbVC];
+    //UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:nbVC];
     
     
     //Lo mostramos
     
-    self.window.rootViewController = navVC;
-    
+  //Antiguo, usamos categorias  self.window.rootViewController = navVC;
+    self.window.rootViewController = [nbVC jszWrappedInNavigation];
    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

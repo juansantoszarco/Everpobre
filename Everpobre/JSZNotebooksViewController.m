@@ -91,6 +91,14 @@
     
 }
 
+-(NSString*)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        return @"Eliminar";
+    }
+    return @"Remove";
+}
+
 #pragma  mark - Actions
 
 -(void) addNotebook:(id) sender{
