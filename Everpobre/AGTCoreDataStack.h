@@ -5,7 +5,10 @@
 //  Copyright (c) 2013 Agbo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+@import CoreData;
+
 @class NSManagedObjectContext;
 
 @interface AGTCoreDataStack : NSObject
@@ -28,5 +31,8 @@
 -(void) zapAllData;
 
 -(void) saveWithErrorBlock: (void(^)(NSError *error))errorBlock;
+
+-(NSArray*) executeFetchRequest: (NSFetchRequest *) req errorBlock:(void (^)(NSError* error))errorBlock;
+
 
 @end

@@ -176,10 +176,29 @@
         
     }else if (self.context.hasChanges) {
         if (![self.context save:&err]) {
-            errorBlock(err);
+            if (errorBlock!= nil) {
+                errorBlock(err);
+            }
+            
         }
     }
     
+}
+
+
+-(NSArray*) executeFetchRequest: (NSFetchRequest *) req
+                     errorBlock:(void (^)(NSError* error))errorBlock{
+    
+    NSError *err;
+    NSArray *res = [self.context executeFetchRequest:req error:&err];
+    
+    if (res ==nil) {
+        //error al ejecutar y se ejecuta el metodo errorBlock que le hemos pasado. ejemplo ascensor, te quedas pillado y te dicen que llames a ese errorblock y te sientas a esperar que haga algo.Se comprueba que el errorblovk no sea nil, para no crear un puntero a una funcion que sea nil y no crear excepciones donde no las hay.
+        if (errorBlock!= nil) {
+            errorBlock(err);
+        }
+    }
+    return res;
 }
 
 
