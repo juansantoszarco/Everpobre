@@ -113,15 +113,15 @@
                                             context:self.stack.context];
     
     //notas a la libreta
-    [JSZNote noteWithName:@"Mariana Dávalos"
+    [JSZNote noteWithName:@"Carmen de Mairena"
                  notebook:nb
                   context:self.stack.context];
     
-    [JSZNote noteWithName:@"Camila Dávalos"
+    [JSZNote noteWithName:@"Rosi de Palma"
                  notebook:nb
                   context:self.stack.context];
     
-    [JSZNote noteWithName:@"Pampita"
+    [JSZNote noteWithName:@"La Venenooor"
                  notebook:nb
                   context:self.stack.context];
     

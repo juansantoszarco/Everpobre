@@ -11,6 +11,10 @@
 		0D24F5201A82207C005625B5 /* JSZNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F51E1A82207C005625B5 /* JSZNotebooksViewController.m */; };
 		0D24F52B1A823E64005625B5 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F52A1A823E64005625B5 /* UIViewController+Navigation.m */; };
 		0D24F52E1A82434C005625B5 /* JSZNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24F52D1A82434C005625B5 /* JSZNotesViewController.m */; };
+		0D24F5351A8256B1005625B5 /* Carmen de Mairena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D24F5321A8256B1005625B5 /* Carmen de Mairena.jpg */; };
+		0D24F5361A8256B1005625B5 /* La Venenooor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D24F5331A8256B1005625B5 /* La Venenooor.jpg */; };
+		0D24F5371A8256B1005625B5 /* Rosi de Palma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D24F5341A8256B1005625B5 /* Rosi de Palma.jpg */; };
+		0D24F5391A8259AC005625B5 /* Nueva Nota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D24F5381A8259AC005625B5 /* Nueva Nota.jpg */; };
 		0D54AD251A7F917000A03D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD241A7F917000A03D79 /* main.m */; };
 		0D54AD281A7F917000A03D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD271A7F917000A03D79 /* AppDelegate.m */; };
 		0D54AD2A1A7F917000A03D79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D54AD291A7F917000A03D79 /* Images.xcassets */; };
@@ -46,6 +50,10 @@
 		0D24F52A1A823E64005625B5 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 		0D24F52C1A82434C005625B5 /* JSZNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZNotesViewController.h; sourceTree = "<group>"; };
 		0D24F52D1A82434C005625B5 /* JSZNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNotesViewController.m; sourceTree = "<group>"; };
+		0D24F5321A8256B1005625B5 /* Carmen de Mairena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Carmen de Mairena.jpg"; sourceTree = "<group>"; };
+		0D24F5331A8256B1005625B5 /* La Venenooor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "La Venenooor.jpg"; sourceTree = "<group>"; };
+		0D24F5341A8256B1005625B5 /* Rosi de Palma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rosi de Palma.jpg"; sourceTree = "<group>"; };
+		0D24F5381A8259AC005625B5 /* Nueva Nota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nueva Nota.jpg"; sourceTree = "<group>"; };
 		0D54AD1F1A7F917000A03D79 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D54AD231A7F917000A03D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D54AD241A7F917000A03D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,6 +123,17 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		0D24F5311A8256A0005625B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D24F5381A8259AC005625B5 /* Nueva Nota.jpg */,
+				0D24F5321A8256B1005625B5 /* Carmen de Mairena.jpg */,
+				0D24F5331A8256B1005625B5 /* La Venenooor.jpg */,
+				0D24F5341A8256B1005625B5 /* Rosi de Palma.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		0D54AD161A7F917000A03D79 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +155,7 @@
 		0D54AD211A7F917000A03D79 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				0D24F5311A8256A0005625B5 /* Resources */,
 				0D24F5221A823DBD005625B5 /* Categories */,
 				0D24F51C1A821F92005625B5 /* Controllers */,
 				0D54AD421A7F950A00A03D79 /* Models */,
@@ -286,8 +306,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D24F5391A8259AC005625B5 /* Nueva Nota.jpg in Resources */,
+				0D24F5351A8256B1005625B5 /* Carmen de Mairena.jpg in Resources */,
 				0D54AD2D1A7F917000A03D79 /* LaunchScreen.xib in Resources */,
 				0D54AD2A1A7F917000A03D79 /* Images.xcassets in Resources */,
+				0D24F5371A8256B1005625B5 /* Rosi de Palma.jpg in Resources */,
+				0D24F5361A8256B1005625B5 /* La Venenooor.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
