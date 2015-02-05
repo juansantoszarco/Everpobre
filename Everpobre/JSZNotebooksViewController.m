@@ -14,6 +14,8 @@
 
 #import "JSZNote.h"
 
+#import "JSZNotebookTableViewCell.h"
+
 
 @interface JSZNotebooksViewController ()
 
@@ -31,6 +33,14 @@
                                                                            target:self action:@selector(addNotebook:)];
     //meto a la barra superior, ya que tiene una propiedad para ello
     self.navigationItem.rightBarButtonItem = addBtn;
+    
+    //Registramos el nib de la celda
+    
+    UINib *nib = [UINib nibWithNibName:@"JSZNotebookTableViewCell"
+                                bundle:[NSBundle mainBundle]];
+    
+    [self.tableView registerNib:nib forCellReuseIdentifier:[JSZNotebookTableViewCell cellId]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,35 +58,29 @@
     
     
     //creo una celda
-    static NSString *cellId = @"NotebookId";
+   // static NSString *cellId = @"NotebookId";celda normal
+    //creo celda para celda personalizada
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
-    if(cell == nil){
-        
-        //se crea la celda desde 0
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
-                                     reuseIdentifier:cellId];
-        
-        
-    }
+    JSZNotebookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[JSZNotebookTableViewCell cellId] forIndexPath:indexPath];
+    
+    
     //la configuro (sincronizo modelo -> vista)
-    cell.textLabel.text = nb.name;
+    cell.nameView.text = nb.name;
+    cell.notesView.text = [NSString stringWithFormat:@"%lu",(unsigned long)nb.notes.count];
     
-    //se formatea la celda
-    NSDateFormatter *fmt = [NSDateFormatter new];
     
-   // fmt.dateStyle = NSDateFormatterShortStyle;
-    
-    [fmt setDateFormat:@"dd/MM/yyyy"];
-    //se crea la fecha de la celda con el formateador y pasandole los parametros
-    
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@  (total notes:%lu)",[fmt stringFromDate:nb.modificationDate],(unsigned long)nb.notes.count];
     
     //la devuelvo
     
     return cell;
     
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return [JSZNotebookTableViewCell height];
 }
 
 

@@ -10,6 +10,8 @@
 #import "JSZNote.h"
 #import "JSZPhotoContainer.h"
 
+#import "JSZNoteViewController.h"
+
 @interface JSZNotesViewController ()
 
 @end
@@ -118,7 +120,22 @@
     
 }
 
+#pragma mark - Delegate
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //averiguar la nota
+    
+    JSZNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    
+    
+    //crear el formulario de nota
+    JSZNoteViewController *nVC = [[JSZNoteViewController alloc] initWithModel:note];
+    
+    //hacer el push
+    [self.navigationController pushViewController:nVC animated:YES];
+}
 
 
 @end

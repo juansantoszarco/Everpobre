@@ -27,6 +27,19 @@
 		0D54AD5E1A7FAB3E00A03D79 /* JSZNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD561A7FAB3E00A03D79 /* JSZNote.m */; };
 		0D54AD5F1A7FAB3E00A03D79 /* JSZNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD581A7FAB3E00A03D79 /* JSZNotebook.m */; };
 		0D54AD601A7FAB3E00A03D79 /* JSZPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D54AD5A1A7FAB3E00A03D79 /* JSZPhotoContainer.m */; };
+		0D9CB0771A836E4800F5E553 /* JSZNotebookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB0751A836E4800F5E553 /* JSZNotebookTableViewCell.m */; };
+		0D9CB0781A836E4800F5E553 /* JSZNotebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9CB0761A836E4800F5E553 /* JSZNotebookTableViewCell.xib */; };
+		0D9CB07C1A83781800F5E553 /* JSZPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB07A1A83781800F5E553 /* JSZPhotoTableViewCell.m */; };
+		0D9CB07D1A83781800F5E553 /* JSZPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9CB07B1A83781800F5E553 /* JSZPhotoTableViewCell.xib */; };
+		0D9CB0811A83794C00F5E553 /* JSZTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB07F1A83794C00F5E553 /* JSZTextTableViewCell.m */; };
+		0D9CB0821A83794C00F5E553 /* JSZTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9CB0801A83794C00F5E553 /* JSZTextTableViewCell.xib */; };
+		0D9CB0861A837B0300F5E553 /* JSZDatesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB0841A837B0300F5E553 /* JSZDatesTableViewCell.m */; };
+		0D9CB0871A837B0300F5E553 /* JSZDatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9CB0851A837B0300F5E553 /* JSZDatesTableViewCell.xib */; };
+		0D9CB08B1A837C0100F5E553 /* JSZNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB0891A837C0100F5E553 /* JSZNameTableViewCell.m */; };
+		0D9CB08C1A837C0100F5E553 /* JSZNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9CB08A1A837C0100F5E553 /* JSZNameTableViewCell.xib */; };
+		0D9CB08F1A837D8E00F5E553 /* JSZNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB08E1A837D8E00F5E553 /* JSZNoteViewController.m */; };
+		0D9CB0931A83A70200F5E553 /* JSZPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB0911A83A70200F5E553 /* JSZPhotoViewController.m */; };
+		0D9CB0941A83A70200F5E553 /* JSZPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9CB0921A83A70200F5E553 /* JSZPhotoViewController.xib */; };
 		0DA144FE1A80D09B00550A2B /* JSZEverpobreBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */; };
 		0DA145011A80D6E800550A2B /* AGTCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA145001A80D6E800550A2B /* AGTCoreDataStack.m */; };
 /* End PBXBuildFile section */
@@ -77,6 +90,26 @@
 		0D54AD581A7FAB3E00A03D79 /* JSZNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNotebook.m; sourceTree = SOURCE_ROOT; };
 		0D54AD591A7FAB3E00A03D79 /* JSZPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZPhotoContainer.h; sourceTree = SOURCE_ROOT; };
 		0D54AD5A1A7FAB3E00A03D79 /* JSZPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZPhotoContainer.m; sourceTree = SOURCE_ROOT; };
+		0D9CB0741A836E4800F5E553 /* JSZNotebookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZNotebookTableViewCell.h; sourceTree = "<group>"; };
+		0D9CB0751A836E4800F5E553 /* JSZNotebookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNotebookTableViewCell.m; sourceTree = "<group>"; };
+		0D9CB0761A836E4800F5E553 /* JSZNotebookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSZNotebookTableViewCell.xib; sourceTree = "<group>"; };
+		0D9CB0791A83781800F5E553 /* JSZPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZPhotoTableViewCell.h; sourceTree = "<group>"; };
+		0D9CB07A1A83781800F5E553 /* JSZPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZPhotoTableViewCell.m; sourceTree = "<group>"; };
+		0D9CB07B1A83781800F5E553 /* JSZPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSZPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		0D9CB07E1A83794C00F5E553 /* JSZTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZTextTableViewCell.h; sourceTree = "<group>"; };
+		0D9CB07F1A83794C00F5E553 /* JSZTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZTextTableViewCell.m; sourceTree = "<group>"; };
+		0D9CB0801A83794C00F5E553 /* JSZTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSZTextTableViewCell.xib; sourceTree = "<group>"; };
+		0D9CB0831A837B0300F5E553 /* JSZDatesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZDatesTableViewCell.h; sourceTree = "<group>"; };
+		0D9CB0841A837B0300F5E553 /* JSZDatesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZDatesTableViewCell.m; sourceTree = "<group>"; };
+		0D9CB0851A837B0300F5E553 /* JSZDatesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSZDatesTableViewCell.xib; sourceTree = "<group>"; };
+		0D9CB0881A837C0100F5E553 /* JSZNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZNameTableViewCell.h; sourceTree = "<group>"; };
+		0D9CB0891A837C0100F5E553 /* JSZNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNameTableViewCell.m; sourceTree = "<group>"; };
+		0D9CB08A1A837C0100F5E553 /* JSZNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSZNameTableViewCell.xib; sourceTree = "<group>"; };
+		0D9CB08D1A837D8E00F5E553 /* JSZNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZNoteViewController.h; sourceTree = "<group>"; };
+		0D9CB08E1A837D8E00F5E553 /* JSZNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZNoteViewController.m; sourceTree = "<group>"; };
+		0D9CB0901A83A70200F5E553 /* JSZPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZPhotoViewController.h; sourceTree = "<group>"; };
+		0D9CB0911A83A70200F5E553 /* JSZPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZPhotoViewController.m; sourceTree = "<group>"; };
+		0D9CB0921A83A70200F5E553 /* JSZPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSZPhotoViewController.xib; sourceTree = "<group>"; };
 		0DA144FC1A80D09B00550A2B /* JSZEverpobreBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZEverpobreBaseClass.h; sourceTree = SOURCE_ROOT; };
 		0DA144FD1A80D09B00550A2B /* JSZEverpobreBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZEverpobreBaseClass.m; sourceTree = SOURCE_ROOT; };
 		0DA144FF1A80D6E800550A2B /* AGTCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataStack.h; sourceTree = "<group>"; };
@@ -110,6 +143,11 @@
 				0D24F51A1A821F7F005625B5 /* AGTCoreDataTableViewController.m */,
 				0D24F51D1A82207C005625B5 /* JSZNotebooksViewController.h */,
 				0D24F51E1A82207C005625B5 /* JSZNotebooksViewController.m */,
+				0D9CB08D1A837D8E00F5E553 /* JSZNoteViewController.h */,
+				0D9CB08E1A837D8E00F5E553 /* JSZNoteViewController.m */,
+				0D9CB0901A83A70200F5E553 /* JSZPhotoViewController.h */,
+				0D9CB0911A83A70200F5E553 /* JSZPhotoViewController.m */,
+				0D9CB0921A83A70200F5E553 /* JSZPhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +193,7 @@
 		0D54AD211A7F917000A03D79 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				0D9CB0731A836E1500F5E553 /* Views */,
 				0D24F5311A8256A0005625B5 /* Resources */,
 				0D24F5221A823DBD005625B5 /* Categories */,
 				0D24F51C1A821F92005625B5 /* Controllers */,
@@ -224,6 +263,28 @@
 				0D54AD541A7FAB3E00A03D79 /* _JSZPhotoContainer.m */,
 			);
 			name = Machine;
+			sourceTree = "<group>";
+		};
+		0D9CB0731A836E1500F5E553 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D9CB0741A836E4800F5E553 /* JSZNotebookTableViewCell.h */,
+				0D9CB0751A836E4800F5E553 /* JSZNotebookTableViewCell.m */,
+				0D9CB0761A836E4800F5E553 /* JSZNotebookTableViewCell.xib */,
+				0D9CB0791A83781800F5E553 /* JSZPhotoTableViewCell.h */,
+				0D9CB07A1A83781800F5E553 /* JSZPhotoTableViewCell.m */,
+				0D9CB07B1A83781800F5E553 /* JSZPhotoTableViewCell.xib */,
+				0D9CB07E1A83794C00F5E553 /* JSZTextTableViewCell.h */,
+				0D9CB07F1A83794C00F5E553 /* JSZTextTableViewCell.m */,
+				0D9CB0801A83794C00F5E553 /* JSZTextTableViewCell.xib */,
+				0D9CB0831A837B0300F5E553 /* JSZDatesTableViewCell.h */,
+				0D9CB0841A837B0300F5E553 /* JSZDatesTableViewCell.m */,
+				0D9CB0851A837B0300F5E553 /* JSZDatesTableViewCell.xib */,
+				0D9CB0881A837C0100F5E553 /* JSZNameTableViewCell.h */,
+				0D9CB0891A837C0100F5E553 /* JSZNameTableViewCell.m */,
+				0D9CB08A1A837C0100F5E553 /* JSZNameTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,10 +368,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D24F5391A8259AC005625B5 /* Nueva Nota.jpg in Resources */,
+				0D9CB0781A836E4800F5E553 /* JSZNotebookTableViewCell.xib in Resources */,
 				0D24F5351A8256B1005625B5 /* Carmen de Mairena.jpg in Resources */,
+				0D9CB08C1A837C0100F5E553 /* JSZNameTableViewCell.xib in Resources */,
+				0D9CB0871A837B0300F5E553 /* JSZDatesTableViewCell.xib in Resources */,
 				0D54AD2D1A7F917000A03D79 /* LaunchScreen.xib in Resources */,
 				0D54AD2A1A7F917000A03D79 /* Images.xcassets in Resources */,
+				0D9CB0941A83A70200F5E553 /* JSZPhotoViewController.xib in Resources */,
 				0D24F5371A8256B1005625B5 /* Rosi de Palma.jpg in Resources */,
+				0D9CB0821A83794C00F5E553 /* JSZTextTableViewCell.xib in Resources */,
+				0D9CB07D1A83781800F5E553 /* JSZPhotoTableViewCell.xib in Resources */,
 				0D24F5361A8256B1005625B5 /* La Venenooor.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,21 +396,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9CB0771A836E4800F5E553 /* JSZNotebookTableViewCell.m in Sources */,
 				0DA145011A80D6E800550A2B /* AGTCoreDataStack.m in Sources */,
 				0D54AD5F1A7FAB3E00A03D79 /* JSZNotebook.m in Sources */,
 				0D24F51B1A821F7F005625B5 /* AGTCoreDataTableViewController.m in Sources */,
 				0D54AD281A7F917000A03D79 /* AppDelegate.m in Sources */,
 				0D24F52B1A823E64005625B5 /* UIViewController+Navigation.m in Sources */,
 				0DA144FE1A80D09B00550A2B /* JSZEverpobreBaseClass.m in Sources */,
+				0D9CB0861A837B0300F5E553 /* JSZDatesTableViewCell.m in Sources */,
+				0D9CB08B1A837C0100F5E553 /* JSZNameTableViewCell.m in Sources */,
 				0D54AD5B1A7FAB3E00A03D79 /* _JSZNote.m in Sources */,
 				0D24F5201A82207C005625B5 /* JSZNotebooksViewController.m in Sources */,
 				0D54AD5D1A7FAB3E00A03D79 /* _JSZPhotoContainer.m in Sources */,
 				0D54AD601A7FAB3E00A03D79 /* JSZPhotoContainer.m in Sources */,
 				0D24F52E1A82434C005625B5 /* JSZNotesViewController.m in Sources */,
 				0D54AD251A7F917000A03D79 /* main.m in Sources */,
+				0D9CB0931A83A70200F5E553 /* JSZPhotoViewController.m in Sources */,
 				0D54AD5C1A7FAB3E00A03D79 /* _JSZNotebook.m in Sources */,
+				0D9CB0811A83794C00F5E553 /* JSZTextTableViewCell.m in Sources */,
+				0D9CB07C1A83781800F5E553 /* JSZPhotoTableViewCell.m in Sources */,
 				0D54AD451A7F958300A03D79 /* Model.xcdatamodeld in Sources */,
 				0D54AD5E1A7FAB3E00A03D79 /* JSZNote.m in Sources */,
+				0D9CB08F1A837D8E00F5E553 /* JSZNoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
