@@ -71,12 +71,12 @@
     
     cell.detailTextLabel.text = [fmt stringFromDate:n.modificationDate];
     
-    if ([n.name isEqualToString:@"Nueva Nota"]) {
+    /*if ([n.name isEqualToString:@"Nueva Nota"]) {
         cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",n.name]];
     }else{
     
         cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",n.name]];
-    }
+    }*/
     
     //la devolvemos
     

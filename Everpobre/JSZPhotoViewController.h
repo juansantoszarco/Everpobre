@@ -11,7 +11,7 @@
 
 @class JSZNote;
 
-@interface JSZPhotoViewController : UIViewController
+@interface JSZPhotoViewController : UIViewController <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 

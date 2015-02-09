@@ -60,14 +60,86 @@
 
 - (IBAction)takePhoto:(id)sender {
     
+    //crear un picker
+    UIImagePickerController *picker = [UIImagePickerController new];
+    
+    
+    //Configuramos, preguntando poco a poco
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        //tenemos camara
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }else{
+        //pos nos conformammos con el carrete
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    picker.delegate = self;
+    
+    //personalizar el picker para que cambie la transicion, cuidado con el curl que falla
+    picker.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    
+    //presentamosview
+    [self presentViewController:picker
+                        animated:YES
+                      completion:^{
+                          NSLog(@"Fin de Imagen");
+                      }];
+    
+    
+    
     
 }
 
 - (IBAction)deletePhoto:(id)sender {
+    //hay que guardar los bounds y el alpha porque si los modificamos quedan alterados,en el completion al final se reasignan los calores
+    CGRect oldRect = self.photoView.bounds;
+    //Animacion
+    
+    [UIView animateKeyframesWithDuration:0.8
+                                   delay:0.0
+                                 options:0
+                              animations:^{
+                                  
+                                  
+                                  //Estado final (se va animar)
+                                  self.photoView.bounds = CGRectZero;
+                                  self.photoView.alpha = 0;
+                              }
+                              completion:^(BOOL finished) {
+                                  //cuando acaba la animacion la quito del modelo y de la vista
+                                  //quitar la foto del modelo
+                                  
+                                  self.model.photo.image = nil;
+                                  
+                                  //quitar la foto de la vista
+                                  
+                                  self.photoView.image = nil;
+                                  
+                                  //dejamos la vista como estaba
+                                  self.photoView.bounds = oldRect;
+                                  self.photoView.alpha = 1.0;
+                              }];
+    
+    
     
     
 }
 
+
+#pragma mark - UIImagepickercontrollerdelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    //OJO pico de memoria que nos puede cerrar la aplicacion
+    
+    self.model.photo.image = [info objectForKey: UIImagePickerControllerOriginalImage];
+    
+    //ahora queda ocultar el picker porque al redefinir el metodo le tenemos que decir nosotros que se oculte
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+    
+    
+    
+}
 
 
 
