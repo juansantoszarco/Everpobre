@@ -120,8 +120,24 @@
                                   self.photoView.alpha = 1.0;
                               }];
     
+    //insertamos otra animacion para que se entremezclen
+    //usingSpringWithDamping es el rebote del muelle para la animacion
     
-    
+    [UIView animateWithDuration:0.8
+                          delay:0
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:1.0
+                        options:0
+                     animations:^{
+                         //Transformada afin
+                         self.photoView.transform = CGAffineTransformMakeRotation(M_PI_2);
+                         
+                     }completion:^(BOOL finished) {
+                         //cuando termina hay que volver a recuperar la transformada, basta con aplicar una constante
+                         self.photoView.transform = CGAffineTransformIdentity;
+                         
+                         
+                     }];
     
 }
 
