@@ -10,6 +10,8 @@
 #import "JSZNote.h"
 #import "JSZPhotoContainer.h"
 
+@import CoreImage;
+
 @interface JSZPhotoViewController ()
 
 @end
@@ -138,6 +140,63 @@
                          
                          
                      }];
+    
+}
+
+
+
+- (IBAction)vintagify:(id)sender {
+    
+    //Creamos un contexto
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    //obtenemos la imagen original en cgimage
+    CIImage *original = [CIImage imageWithCGImage:self.model.photo.image.CGImage];
+    
+    //creamos y configuramos el filtro
+    CIFilter *falseColor = [CIFilter filterWithName:@"CIFalseColor"];
+    
+    
+    //Configurarlo
+    [falseColor setDefaults ];
+    
+    [falseColor setValue:original
+                  forKey:@"InputImage"];
+    
+    //obtengo la imagen de salida del filtro
+    CIImage *output = falseColor.outputImage;
+    
+    /**creamos el filtro de viñeta*/
+    
+    CIFilter *vignette = [CIFilter filterWithName:@"CIVignette"];
+    [vignette setDefaults];
+    [vignette setValue:@8
+                forKey:@"InputIntensity"];
+    
+    [vignette setValue:output
+                forKey:@"InputImage"];
+    output = vignette.outputImage;
+    
+    /***********************/
+    
+    //aplicamos el filtro
+    
+    CGImageRef final = [context createCGImage:output fromRect:[output extent]];
+    
+    //encasquetamos en uiimageview
+    
+    UIImage *finalImg = [UIImage imageWithCGImage:final];
+    
+    
+    //liberamos recursos
+    CGImageRelease(final);
+    
+    
+    //Actualizamos vista y modelo
+    
+    self.photoView.image = finalImg;
+    self.model.photo.image = finalImg;
+    
     
 }
 

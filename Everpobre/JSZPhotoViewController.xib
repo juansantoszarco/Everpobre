@@ -25,6 +25,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Wwg-av-b87"/>
+                        <barButtonItem title="Vintage" id="t5e-OL-BOY">
+                            <connections>
+                                <action selector="vintagify:" destination="-1" id="u5F-ea-cHZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="V8i-62-hVS"/>
                         <barButtonItem systemItem="trash" id="2Yx-Ex-uMC">
                             <connections>
                                 <action selector="deletePhoto:" destination="-1" id="eRg-rQ-rL5"/>

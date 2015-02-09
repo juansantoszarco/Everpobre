@@ -21,6 +21,8 @@
 
 - (IBAction)deletePhoto:(id)sender;
 
+- (IBAction)vintagify:(id)sender;
+
 -(id) initWithModel:(JSZNote*)note;
 
 @end
